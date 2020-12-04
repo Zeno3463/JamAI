@@ -1,15 +1,13 @@
-# Note, XXX means something I don't want you to know. These can be the path to my google profile, my chromedriver path, etc.
-
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import datetime
 import time
 
-path = "XXX"
+path = "C:\Program Files (x86)\chromedriver.exe"
 options = Options()
-options.add_argument("XXX")
-options.add_argument('XXX')
+options.add_argument("--user-data-dir=C:/Users/user/AppData/Local/Google/Chrome/User Data")
+options.add_argument('--profile-directory=Profile 2')
 driver = webdriver.Chrome(path, chrome_options=options)
 
 def round_seconds(dts):
